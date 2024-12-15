@@ -1,0 +1,49 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Player">
+			<method name="OnBulletCount"/>
+			<method name="OnBulletCount"/>
+			<method name="OnLook"/>
+			<method name="OnLook"/>
+			<method name="OnMove"/>
+			<method name="OnMove"/>
+			<method name="OnShotgunSpread"/>
+			<method name="OnShotgunSpread"/>
+			<method name="OnToggleDevUI"/>
+			<method name="OnToggleDevUI"/>
+			<method name="OnToggleInvincible"/>
+			<method name="OnToggleInvincible"/>
+			<method name="OnToggleShotgun"/>
+			<method name="OnToggleShotgun"/>
+			<method name="OnZoom"/>
+			<method name="OnZoom"/>
+		</type>
+		<type fullname="PlayerShoot">
+			<method name="OnFire"/>
+			<method name="OnFire"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField">
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel">
+			<method name="OnScrollbarClicked"/>
+			<method name="OnScrollbarClicked"/>
+			<method name="ResetDebugManager"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+</linker>

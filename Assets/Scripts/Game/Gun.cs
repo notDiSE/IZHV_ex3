@@ -200,11 +200,22 @@ public class Gun : MonoBehaviour
          *  - Number / spread of shotgun bullets : shotgunBullets, shotgunSpread
          * Implement both single shot and shotgun (swap by pressing <SPACE> by default)
          */
-        
-        SpawnBullet(
-            new Vector3{ x = 0.0f, y = 0.0f, z = 0.0f }, 
-            Quaternion.Euler(0.0f, 0.0f, 0.0f)
-        );
+        if (shotgun)
+        {
+            for (int i = 0; i < shotgunBullets; i++)
+            {
+                SpawnBullet(director.position + director.up * 0.5f,
+                    Quaternion.Euler(0.0f, 0.0f, director.eulerAngles.z - shotgunSpread/2 + i * shotgunSpread / (shotgunBullets - 1)));
+            }
+        }
+        else SpawnBullet(director.position + director.up * 0.5f, director.rotation);
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(!mBulletDirector) return;
+        Gizmos.DrawWireSphere(mBulletDirector.position + mBulletDirector.up*0.5f, 0.1f);
     }
 
     /// <summary>
